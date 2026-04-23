@@ -567,7 +567,7 @@ var loadedAssets = request.allAssets;
 
 ## 管理已加载的 AssetBundles
 
-**AA（Addressables）**包简化了管理AB包，依赖和资产的过程。但对于手动管理，理解AB包加载和卸载时机对避免内存重复或者丢失对象非常重要。
+**AA（Addressables）** 包简化了管理AB包，依赖和资产的过程。但对于手动管理，理解AB包加载和卸载时机对避免内存重复或者丢失对象非常重要。
 
 ### 建议的卸载策略
 
@@ -990,7 +990,7 @@ Unity自动执行缓存清除。它会在启动时检查缓存，并清除过去
   *【剥离类型树后，代码修改和资源修改后，玩家必须要同时更新才能确保安全】*
   - **Editor Loading编辑器加载：** 如果你在Play模式下尝试加载没有类型树的AB包，系统会出现错误日志。这是因为编辑器和真机运行类型结构不一致。例如，MonoBehaviours在编辑器环境下有额外的字段。
   *【在开发环境下，用宏定义加载防止TypeTree报错，避免每次需要重新打包】*
-  - **Debugging调试：** 在没有类型树的情况下，Unity提供的用于分析兼容性的工具非常有限。manifest中的**TypeTreeHash**很有用，**binary2text**（用**-typeinfo**标志）工具暴露了原始类型树细节作为比较。
+  - **Debugging调试：** 在没有类型树的情况下，Unity提供的用于分析兼容性的工具非常有限。manifest中的**TypeTreeHash**很有用，**binary2text**（用<b>-typeinfo</b>标志）工具暴露了原始类型树细节作为比较。
 
 ## 内容目录表
 
